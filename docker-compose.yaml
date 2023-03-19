@@ -1,0 +1,27 @@
+# Version of the docker compose
+version: '3'
+
+# Services is where all the container goes
+services:
+  #name of the container
+  frontendcontainer:
+    # image from which the container will be built
+    image: msgapp-frontend-image:1.0.0-prod
+    # port mapping for the container
+    ports:
+      - "3000:80"
+    networks:
+      - msgappnetwork
+  backendcontainer:
+    # image from which the container will be built
+    image: msgapp-backend-image:1.0.0-prod
+    # port mapping for the container
+    ports:
+      - "5000:5000"
+    networks:
+      - msgappnetwork
+    
+# If we do not create a network in docker compose file, it will create a default network. All the services will share that network
+networks:
+  msgappnetwork:
+    driver: bridge

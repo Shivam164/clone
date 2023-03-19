@@ -1,0 +1,17 @@
+I already have Dockerfile for both fronend and backend.
+
+Step:
+
+1. Create image from the Dockerfiles.
+
+    FrontendImage: docker build -t msgapp-fronend-image:1.0.0-prod
+    BackendImage: docker build -t msgapp-backend-image:1.0.0-prod
+
+2. Create a network to run both of these container
+
+    docker network create msgappnetwork
+
+3. Create container from the images
+
+    Frontend Container: docker run --rm -it --name frontendcontainer -p 3000:80 --network=msgappnetwork msgapp-frontend-image:1.0.0-prod
+    Backend Container: docker run --rm -it --name backendendcontainer -p 5000:5000 --network=msgappnetwork msgapp-backend-image:1.0.0-prod

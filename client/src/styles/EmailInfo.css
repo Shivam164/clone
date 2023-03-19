@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@900&display=swap");
+
+.emailInfo {
+  font-family: "Source Sans Pro", sans-serif;
+  display: flex;
+  flex-direction: column;
+  /* margin-top: 5rem; */
+}
+
+.signIn__form > * {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+
+.signIn__form{
+  display: flex;
+  flex-direction: column;
+}
+
+.signIn__form > input {
+  outline: 0;
+}
+
+.signIn__form > button {
+  border: 0;
+  background-color: rgb(69, 52, 228);
+  color: white;
+  cursor: pointer;
+}
+
+.logIn{
+  display: flex;
+  justify-content : center;
+}
+
+.logIn > button {
+  all: unset;
+  margin-left: 0.3rem;
+  color: rgb(69, 52, 228);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.signup__error{
+  color : red;
+  margin : 0;
+  max-width: 20rem;
+  text-align: center;
+}
+
+.mail__sent{
+  color : white;
+  background-color: rgb(74, 220, 74);
+  text-align: center;
+  padding : 0.5rem 0;
+}
